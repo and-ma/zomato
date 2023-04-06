@@ -59,5 +59,5 @@ with st.container():
     for index, location in df.iterrows():
         folium.Marker([location['Latitude'],
                       location['Longitude']],
-                     icon = folium.Icon(icon="icon",color=df['Rating Color'].tolist()[index])).add_to(marker_cluster)
+                     icon = folium.Icon(icon="icon")).add_to(marker_cluster)
     folium_static(map,1024,600)
