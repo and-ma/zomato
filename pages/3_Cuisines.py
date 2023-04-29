@@ -33,12 +33,12 @@ st.sidebar.markdown("## Filters")
 #Filtros
 country_select = st.sidebar.multiselect("Select the countries to view their informations:",
                                         df['Country'].unique().tolist(),
-                                        default=["Brazil", "Canada", "South Africa", "India", "Australia"])
+                                        default=["Canada", "India"])
 df = df.loc[df['Country'].isin(country_select),:]
 st.sidebar.markdown("""___""")
 cuisine_select = st.sidebar.multiselect("Select the types of cuisines to view:",
                                         df['Cuisines'].unique().tolist(),
-                                        default=["Brazilian", "Canadian", "British", "South African", "Indian", "Australian"])
+                                        default=["Canadian", "Indian"])
 df = df.loc[df['Cuisines'].isin(cuisine_select),:]
 st.sidebar.markdown("""___""")
 num_slider = st.sidebar.slider("Select the number of restaurants you would like to view",
