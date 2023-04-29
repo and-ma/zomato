@@ -67,7 +67,7 @@ with st.container():
         best("Japanese")
         
     with col5:
-        best("Chinese")
+        best("Indian")
 
 with st.container():
     st.markdown("## Top {} Restaurants".format(num_slider))
